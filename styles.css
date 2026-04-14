@@ -1,1 +1,3 @@
 /* Add Global styles here */
+.category { display: flex; gap: 0px; }  /*Use justify-content: space-between to push them to opposite ends*/
+/*^^^^not working, figure it out^^^^*/ 
