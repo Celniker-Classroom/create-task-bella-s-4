@@ -2,6 +2,8 @@
 
 //in class tips
 
+
+function 
 // document.getElementById("playBtn").addEventListener("click",function() 
 //     {play(level)
 //     //can also just leave out "function()"
