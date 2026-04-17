@@ -30,17 +30,33 @@ const scientists = [
 const result = document.createElement("p");
 document.body.appendChild(result);
 
-function findScientists(topic) {
-    let output = "Your Geniuses: ";
+function getRandomScientist(topic) {
+    let filtered = [];
 
     for (let i = 0; i < scientists.length; i++) {
-
         if (scientists[i].field === topic) {
-            output += scientists[i].name + ", ";
+            filtered.push(scientists[i]);
         }
     }
 
-    result.textContent = output;
+    // nothing clicked
+    if (filtered.length === 0) {
+        result.textContent = "Please select a category first!";
+        return;
+    }
+
+    // random
+    let randomIndex = Math.floor(Math.random() * filtered.length);
+    result.textContent = "Your Genius: " + filtered[randomIndex].name;
+}
+
+function getSelectedTopic() {
+    if (document.getElementById("compsci").checked) return "compsci";
+    if (document.getElementById("physics").checked) return "physics";
+    if (document.getElementById("chem").checked) return "chem";
+    if (document.getElementById("math").checked) return "math";
+    if (document.getElementById("engineering").checked) return "engineering";
+    return null;
 }
 
 // input
@@ -62,4 +78,9 @@ document.getElementById("math").addEventListener("change", function() {
 
 document.getElementById("engineering").addEventListener("change", function() {
     findScientists("engineering");
+});
+
+document.getElementById("randomBtn").addEventListener("click", function() {
+    let topic = getSelectedTopic();
+    getRandomScientist(topic);
 });
