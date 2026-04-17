@@ -1,32 +1,46 @@
-// add javascript here
-
-//in class tips
-
-// document.getElementById("playBtn").addEventListener("click",function() 
-//     {play(level)
-//     //can also just leave out "function()"
-// })
-
-// function play(level) {
-//     let radios = document.getElementByName("level");
-//     //etc etc
-// }
-
-// LIST (stores multiple scientists organized by category)
 const scientists = [
     { name: "Alan Turing", field: "compsci" },
     { name: "Ada Lovelace", field: "compsci" },
+    { name: "George Boole", field: "compsci" },
+    { name: "Kathleen Booth", field: "compsci" },
+    { name: "Tommy Flowers", field: "compsci" },
+    { name: "Susan L Graham", field: "compsci" },
+    { name: "Grace Hopper", field: "compsci" },
+    { name: "Gladys West", field: "compsci" },
     { name: "Albert Einstein", field: "physics" },
     { name: "Isaac Newton", field: "physics" },
+    { name: "Niels Bohr", field: "physics" },
+    { name: "Galileo Galilei", field: "physics" },
+    { name: "Maria Geoppert Mayer", field: "physics" },
+    { name: "Michael Faraday", field: "physics" },
+    { name: "Emmy Noether", field: "physics" },
+    { name: "Marie Curie", field: "physics" },
     { name: "Marie Curie", field: "chem" },
     { name: "Dmitri Mendeleev", field: "chem" },
+    { name: "Richard Abegg", field: "chem" },
+    { name: "Heather Cecil Allen", field: "chem" },
+    { name: "Andrea Angel", field: "chem" },
+    { name: "Valerie Ashby", field: "chem" },
+    { name: "Katheryn Bullock", field: "chem" },
+    { name: "Melvin Calvin", field: "chem" },
     { name: "Carl Gauss", field: "math" },
     { name: "Katherine Johnson", field: "math" },
+    { name: "Pythagoras", field: "math" },
+    { name: "Terence Tao", field: "math" },
+    { name: "Archimedes", field: "math" },
+    { name: "Narges Mohammadi", field: "math" },
+    { name: "Euclid", field: "math" },
+    { name: "Maryam Mirzakhani", field: "math" },
     { name: "Nikola Tesla", field: "engineering" },
-    { name: "Benjamin Franklin", field: "engineering" }
+    { name: "Thomas Edison", field: "engineering" },
+    { name: "Henry Ford", field: "engineering" },
+    { name: "Nikolaus Otto", field: "engineering" },
+    { name: "Leonardo Da Vinci", field: "engineering" },
+    { name: "Edith Clarke", field: "engineering" },
+    { name: "Hedy Lamarr", field: "engineering" },
+    { name: "Mary Walton", field: "engineering" },
 ];
 
-// output
 const result = document.createElement("p");
 document.body.appendChild(result);
 
@@ -39,13 +53,11 @@ function getRandomScientist(topic) {
         }
     }
 
-    // nothing clicked
     if (filtered.length === 0) {
         result.textContent = "Please select a category first!";
         return;
     }
 
-    // random
     let randomIndex = Math.floor(Math.random() * filtered.length);
     result.textContent = "Your Genius: " + filtered[randomIndex].name;
 }
@@ -58,27 +70,6 @@ function getSelectedTopic() {
     if (document.getElementById("engineering").checked) return "engineering";
     return null;
 }
-
-// input
-document.getElementById("compsci").addEventListener("change", function() {
-    findScientists("compsci");
-});
-
-document.getElementById("physics").addEventListener("change", function() {
-    findScientists("physics");
-});
-
-document.getElementById("chem").addEventListener("change", function() {
-    findScientists("chem");
-});
-
-document.getElementById("math").addEventListener("change", function() {
-    findScientists("math");
-});
-
-document.getElementById("engineering").addEventListener("change", function() {
-    findScientists("engineering");
-});
 
 document.getElementById("randomBtn").addEventListener("click", function() {
     let topic = getSelectedTopic();
