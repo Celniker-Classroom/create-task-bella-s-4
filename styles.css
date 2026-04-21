@@ -1,3 +1,29 @@
 /* Add Global styles here */
 .category { display: flex; gap: 0px; }  /*Use justify-content: space-between to push them to opposite ends*/
 /*^^^^not working, figure it out^^^^*/ 
+
+h1 {
+    color:rgb(5, 68, 5);
+    font-size: 70px;
+    text-align: center;
+    border: dotted;
+    border-color: rgb(229, 147, 147);
+}
+
+h2 {
+    color:rgb(253, 175, 214);
+    font-size: 44px;
+    text-align: center;
+    border: solid;
+    border-color: rgb(147, 229, 178);
+}
+
+body {
+    background-color:rgba(248, 246, 214, 0.349);
+}
+
+input[type="radio"] {
+  accent-color: #ff5733; /* Your custom color */
+  width: 20px;          /* Basic sizing */
+  height: 20px;
+}
