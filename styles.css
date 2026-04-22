@@ -1,29 +1,70 @@
-/* Add Global styles here */
-.category { display: flex; gap: 0px; }  /*Use justify-content: space-between to push them to opposite ends*/
-/*^^^^not working, figure it out^^^^*/ 
+.category { 
+    display: flex; 
+    gap: 10px; 
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px; 
+}
+
+.container {
+    background-color: white;
+    padding: 30px, 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
 h1 {
     color:rgb(5, 68, 5);
-    font-size: 70px;
+    font-size: 48px;
     text-align: center;
     border: dotted;
     border-color: rgb(229, 147, 147);
+    padding: 10px; 
+    margin-bottom: 15px;
 }
 
 h2 {
     color:rgb(253, 175, 214);
-    font-size: 44px;
-    text-align: center;
+    font-size: 24px;
     border: solid;
     border-color: rgb(147, 229, 178);
+    padding: 10px; 
+    margin-bottom: 15px;
 }
 
 body {
     background-color:rgba(248, 246, 214, 0.349);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 input[type="radio"] {
-  accent-color: #ff5733; /* Your custom color */
-  width: 20px;          /* Basic sizing */
-  height: 20px;
+  accent-color: #ff5733;
+  margin-right: 8px;
+}
+
+button {
+    background-color: rgb(147, 229, 178);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(120, 200, 150);
+}
+
+p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(5, 68, 5);
+    font-weight: bold;
 }
