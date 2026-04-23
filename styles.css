@@ -1,70 +1,90 @@
 .category { 
-    display: flex; 
-    gap: 10px; 
+    display: flex;
     flex-direction: column;
-    text-align: left;
-    margin-bottom: 20px; 
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .container {
     background-color: white;
-    padding: 30px, 40px;
-    border-radius: 15px;
+    padding: 35px;
+    border-radius: 20px;
     text-align: center;
-    width: 400px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 h1 {
-    color:rgb(5, 68, 5);
-    font-size: 48px;
-    text-align: center;
-    border: dotted;
-    border-color: rgb(229, 147, 147);
-    padding: 10px; 
-    margin-bottom: 15px;
+    color: #2e7d5b; /* softer green */
+    font-size: 42px;
+    margin-bottom: 10px;
+
 }
 
 h2 {
-    color:rgb(253, 175, 214);
-    font-size: 24px;
-    border: solid;
-    border-color: rgb(147, 229, 178);
-    padding: 10px; 
-    margin-bottom: 15px;
+     color: #ff8fb1; /* soft pink */
+    font-size: 20px;
+    margin-bottom: 20px;
+
 }
 
 body {
-    background-color:rgba(248, 246, 214, 0.349);
-    font-family: Arial, sans-serif;
+    background-color: linear-gradient(135deg, #ffe4ef, #e6fff4);
+    font-family: "Segoe UI", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+}
+
+.option {
+    background: #fdfdfd;
+    border: 2px solid #d8f3e8;
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option:hover {
+    background: #fff0f6;
+    border-color: #ffb3c7;
+}
+
+.option input:checked + span,
+.option input:checked {
+    accent-color: #ff6f91;
 }
 
 input[type="radio"] {
-  accent-color: #ff5733;
-  margin-right: 8px;
+    margin-right: 10px;
+    transform: scale(1.2);
 }
 
 button {
-    background-color: rgb(147, 229, 178);
+    background: linear-gradient(135deg, #ff8fb1, #7ed6a7);
     border: none;
-    padding: 10px 20px;
+    padding: 12px 22px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: 0.2s;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-    background-color: rgb(120, 200, 150);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 p {
     margin-top: 20px;
-    font-size: 20px;
-    color: rgb(5, 68, 5);
+    font-size: 22px;
+    color: #2e7d5b;
     font-weight: bold;
+    background: #f0fff7;
+    padding: 10px;
+    border-radius: 10px;
 }
